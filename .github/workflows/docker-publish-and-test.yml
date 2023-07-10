@@ -146,8 +146,7 @@ jobs:
   test:
     needs: build
     runs-on: windows-latest
-    container: minionguyjpro/imgburn
     steps:
       - name: Run Docker image
-        run: imgburn.exe /SRC
+        run: docker run -it minionguyjpro/imgburn ImgBurn.exe /SRC
         shell: cmd
